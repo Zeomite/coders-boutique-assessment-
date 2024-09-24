@@ -63,11 +63,11 @@ testRouter.post("/register", async(req,res)=>{
       if (!existingUser) {
         return res.status(404).json({ message: "User not found" });
       }
-      // Generate a token for password reset
+      
       const token = jwt.sign({ email: existingUser.email, id: existingUser._id }, SECRET_KEY, { expiresIn: '15m' });
       const resetUrl = `http://localhost:3000/reset-password?token=${token}`;
       // Send email
-      const message = `You requested to reset your password. Click on the following link to reset your password: ${resetUrl}`;
+      const message = `You requested to reset your password. POSTMAN Reset Url: ${resetUrl}`;
       await sendEmail(existingUser.email, "Password Reset Request", message);
       res.status(200).json({ message: "Password reset link sent to email" });
     } catch (error) {
