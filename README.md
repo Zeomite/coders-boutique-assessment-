@@ -4,6 +4,8 @@
 
 This documentation describes the authentication and password reset functionalities. The routes include user registration, login, forgot password, and reset password functionality.
 
+Vercel Deployment Link: [Vercel Link](https://coders-boutique-assessment.vercel.app)
+
 ---
 
 ## **Base URL**
