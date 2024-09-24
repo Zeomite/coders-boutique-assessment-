@@ -272,9 +272,10 @@ This route allows a user to reset their password by providing a valid JWT token 
 Make sure to configure the following environment variables:
 
 ```
+MONGO_URL=your_mongodb_connection_string
 SECRET_KEY=your_jwt_secret_key
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_email_password
+ADMIN_EMAIL=your_email@gmail.com
+NODEMAILER_PASS=your_app_passsword
 ```
 
 ---
